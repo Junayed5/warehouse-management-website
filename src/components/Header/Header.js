@@ -1,9 +1,23 @@
 import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <div>
-            <h1>This is header</h1>
+            <Navbar collapseOnSelect expand="lg" bg="light">
+                <Container>
+                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="ms-auto">
+                            <Nav.Link as={Link} to="/">Home</Nav.Link>
+                            <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        </Nav>
+                        
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         </div>
     );
 };
