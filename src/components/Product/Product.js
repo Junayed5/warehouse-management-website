@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Product = (props) => {
     console.log(props.product);
-    const { name, img, price, quantity, description, } = props.product
+    const {_id, name, img, price, quantity, description, } = props.product
     return (
         <div className='col-lg-4 border'>
             <div>
@@ -13,7 +14,9 @@ const Product = (props) => {
                 <p>Price:{price}</p>
                 <p><small>Quantity:{quantity}</small></p>
                 <p><i>{description}</i></p>
-                <button className='btn btn-secondary'>Manage</button>
+                <Link to={`/product/${_id}`}>
+                    <button className='btn btn-secondary w-75'>Manage</button>
+                </Link>
             </div>
         </div>
     );
