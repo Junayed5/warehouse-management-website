@@ -15,7 +15,7 @@ const Product = (props) => {
                 <p><i>{description}</i></p>
                 <p><small>Supplier:{supplier}</small></p>
                 <Link to={`/product/${_id}`}>
-                    <button className='btn btn-secondary w-75'>Manage</button>
+                    <button className='btn btn-secondary w-75 mb-3'>Manage</button>
                 </Link>
             </div>
         </div>
