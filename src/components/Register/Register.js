@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
 
@@ -23,9 +24,10 @@ const Register = () => {
                     <Form.Control name='password' type="password" placeholder="Password" />
                 </Form.Group>
                 <p>Already have an account <Link to='/login'><button className='btn btn-link text-decoration-none'>Please Login</button></Link></p>
-                <Button variant="primary" type="submit">
+                <Button className='w-50' variant="info" type="submit">
                     Register
                 </Button>
+                <SocialLogin/>
             </Form>
         </div>
     );

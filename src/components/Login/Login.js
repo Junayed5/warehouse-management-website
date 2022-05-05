@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
 
@@ -26,6 +27,7 @@ const Login = () => {
                 <Button variant="primary" type="submit">
                     Login
                 </Button>
+                <SocialLogin/>
             </Form>
         </div>
     );
