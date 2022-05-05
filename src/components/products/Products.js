@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import UseProducts from '../../hooks/UseProducts';
 import Product from '../Product/Product';
 
@@ -14,6 +15,9 @@ const Products = () => {
                     showProducts.map(product =><Product key={product._id} product={product}></Product>)
                 }
             </div>
+            <Link to='/manageAll'>
+                <button className='btn btn-success m-3'>Manage All Inventories</button>
+            </Link>
         </div>
     );
 };
