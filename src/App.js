@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import Item from './components/Item/Item';
 import Login from './components/Login/Login';
 import ManageInventories from './components/ManageInventories/ManageInventories';
+import NotFound from './components/NotFound/NotFound';
 import Register from './components/Register/Register';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 
@@ -23,6 +24,7 @@ function App() {
             <Item/>
           </RequireAuth>
         }></Route>
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
     </div>
   );
