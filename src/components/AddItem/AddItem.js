@@ -9,9 +9,9 @@ const AddItem = () => {
         const quantity = event.target.quantity.value;
         const description = event.target.description.value;
         const supplier = event.target.supplier.value;
-        const image = event.target.url.value;
+        const img = event.target.url.value;
 
-        const addItem = { name, price, quantity, description, supplier, image }
+        const addItem = { name, price, quantity, description, supplier, img }
         // 
 
         fetch('https://protected-coast-77549.herokuapp.com/products', {
