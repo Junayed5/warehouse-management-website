@@ -54,7 +54,8 @@ const Item = () => {
             .then(member => {
                 console.log('Success:', member);
                 setProduct(product);
-            })
+            });
+        
     }
 
     return (
