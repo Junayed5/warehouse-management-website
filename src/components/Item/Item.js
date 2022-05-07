@@ -38,8 +38,23 @@ const Item = () => {
 
     const handleRestock = event => {
         event.preventDefault();
-        const restock = event.target.restock.value;
-        console.log(restock);
+        const restockValue = event.target.restock.value;
+        const value = parseInt(restockValue);
+        const restock = {quantity:parseInt(quantity) + value};
+
+        const url = `https://protected-coast-77549.herokuapp.com/products/${_id}`;
+        fetch(url, {
+            method: 'PUT', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(restock),
+        })
+            .then(response => response.json())
+            .then(member => {
+                console.log('Success:', member);
+                setProduct(product);
+            })
     }
 
     return (
