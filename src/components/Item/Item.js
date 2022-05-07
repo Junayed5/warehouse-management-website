@@ -11,7 +11,30 @@ const Item = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data));
-    }, [searchId.productId])
+    }, [product]);
+
+    
+
+    const handleDelivered = () => {
+        // console.log(id);
+        // const productId = id;
+        const productQuantity = {quantity:quantity - 1}
+
+        const url = `https://protected-coast-77549.herokuapp.com/products/${_id}`;
+        fetch(url, {
+            method: 'PUT', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(productQuantity),
+        })
+            .then(response => response.json())
+            .then(member => {
+                console.log('Success:', member);
+                setProduct(product);
+            })
+    }
+
     return (
         <div className='border w-25 mx-auto text-start'>
             <img className='w-100' src={img} alt="" />
@@ -21,7 +44,7 @@ const Item = () => {
             <p className='mb-1'>Quantity:{quantity}</p>
             <p className='mb-1'>Supplier:{supplier}</p>
             <p><small>Description:{description}</small></p>
-            <button className='btn btn-info w-100'>Delivered</button>
+            <button className='btn btn-info w-100' onClick={handleDelivered}>Delivered</button>
         </div>
     );
 };

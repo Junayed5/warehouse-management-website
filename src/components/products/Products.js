@@ -16,7 +16,7 @@ const Products = () => {
                 }
             </div>
             <Link to='/manageAll'>
-                <button className='btn btn-success m-3'>Manage All Item</button>
+                <button className='btn btn-success m-3'>Manage All Inventories</button>
             </Link>
         </div>
     );
