@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AllItem = (props) => {
-    const { _id, name, img, price, quantity, description, supplier } = props.product;
+    const { _id, name, img, price, quantity, description, supplier } = props.product || props.myItem;
 
     const {handleItemDelete} = props;
     return (

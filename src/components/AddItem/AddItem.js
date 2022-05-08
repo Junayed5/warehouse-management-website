@@ -4,6 +4,7 @@ import auth from '../../firebase.init';
 
 const AddItem = () => {
     const [user] = useAuthState(auth);
+    // const navigate = useNavigate();
 
     const handleAddItem = event => {
         event.preventDefault();
@@ -27,7 +28,20 @@ const AddItem = () => {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
+            });
+        fetch('https://protected-coast-77549.herokuapp.com/newItem', {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(addItem),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
             })
+        
+        
     }
 
     return (
