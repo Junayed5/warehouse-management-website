@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const AddItem = () => {
@@ -28,6 +29,7 @@ const AddItem = () => {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
+                toast('Add a new item')
             });
         fetch('https://protected-coast-77549.herokuapp.com/newItem', {
             method: 'POST', // or 'PUT'
@@ -39,6 +41,7 @@ const AddItem = () => {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
+                toast('Add a new item')
             })
         
         
@@ -57,6 +60,7 @@ const AddItem = () => {
                 <input className='w-100 m-2' type="text" name="url" id="" placeholder='Image URl' /><br />
                 <input type="submit" value="Add New" />
             </form>
+            <ToastContainer/>
         </div>
     );
 };
