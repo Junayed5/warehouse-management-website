@@ -14,8 +14,7 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h4>Living room interior wall mockup in warm tones with leather sofa which is behind the kitchen</h4>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -26,8 +25,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h4>Modern living room interior with sofa and green plants.</h4>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -38,8 +36,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <h4>Double sofa for TV room.</h4>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
