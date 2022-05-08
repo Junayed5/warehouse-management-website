@@ -1,6 +1,6 @@
 # Warehouse Management service
 
-This project live link is [Live link](https://github.com/facebook/create-react-app).
+This project live link is [Live link](https://warehouse-management-9909d.web.app/).
 
 ## Framework
 
