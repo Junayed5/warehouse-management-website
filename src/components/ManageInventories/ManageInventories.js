@@ -9,7 +9,7 @@ const ManageInventories = () => {
     const handleItemDelete = id => {
         const confirm = window.confirm('Are you sure?')
         if (confirm) {
-            const url = `https://protected-coast-77549.herokuapp.com/products/${id}`;
+            const url = `https://furniture-warehouse.onrender.com/products/${id}`;
             fetch(url,{
                 method:'DELETE'
             })
@@ -21,7 +21,7 @@ const ManageInventories = () => {
             })
         }
         if (confirm) {
-            const url = `https://protected-coast-77549.herokuapp.com/newItem/${id}`;
+            const url = `https://furniture-warehouse.onrender.com/newItem/${id}`;
             fetch(url,{
                 method:'DELETE'
             })

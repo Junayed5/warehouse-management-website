@@ -7,7 +7,7 @@ const MyItem = () => {
     const [myItem, setMyItem] = useState([]);
     useEffect(() => {
         const email = user.email;
-        const url = `https://protected-coast-77549.herokuapp.com/newItem?email=${email}`;
+        const url = `https://furniture-warehouse.onrender.com/newItem?email=${email}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setMyItem(data));
@@ -16,7 +16,7 @@ const MyItem = () => {
     const handleDeleteItem = id => {
         const confirm = window.confirm('Are you sure');
         if (confirm) {
-            const url = `https://protected-coast-77549.herokuapp.com/newItem/${id}`;
+            const url = `https://furniture-warehouse.onrender.com/newItem/${id}`;
             fetch(url,{
                 method:'DELETE'
             })
@@ -29,7 +29,7 @@ const MyItem = () => {
         }
 
         if (confirm) {
-            const url = `https://protected-coast-77549.herokuapp.com/products/${id}`;
+            const url = `https://furniture-warehouse.onrender.com/products/${id}`;
             fetch(url,{
                 method:'DELETE'
             })

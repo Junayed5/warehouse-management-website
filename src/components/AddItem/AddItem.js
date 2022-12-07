@@ -19,7 +19,7 @@ const AddItem = () => {
         
         const addItem = { name,email, price, quantity, description, supplier, img }
 
-        fetch('https://protected-coast-77549.herokuapp.com/products', {
+        fetch('https://furniture-warehouse.onrender.com/products', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ const AddItem = () => {
                 console.log('Success:', data);
                 toast('Add a new item')
             });
-        fetch('https://protected-coast-77549.herokuapp.com/newItem', {
+        fetch('https://furniture-warehouse.onrender.com/newItem', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

@@ -8,7 +8,7 @@ const Item = () => {
     const { _id, img, name, price, quantity, description, supplier } = product;
     
     useEffect(() => {
-        const url = `https://protected-coast-77549.herokuapp.com/product/${id}`
+        const url = `https://furniture-warehouse.onrender.com/product/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data));
@@ -21,7 +21,7 @@ const Item = () => {
         // const productId = id;
         const productQuantity = { quantity: quantity - 1 }
 
-        const url = `https://protected-coast-77549.herokuapp.com/products/${_id}`;
+        const url = `https://furniture-warehouse.onrender.com/products/${_id}`;
         fetch(url, {
             method: 'PUT', // or 'PUT'
             headers: {
@@ -42,7 +42,7 @@ const Item = () => {
         const value = parseInt(restockValue);
         const restock = {quantity:parseInt(quantity) + value};
 
-        const url = `https://protected-coast-77549.herokuapp.com/products/${_id}`;
+        const url = `https://furniture-warehouse.onrender.com/products/${_id}`;
         fetch(url, {
             method: 'PUT', // or 'PUT'
             headers: {
